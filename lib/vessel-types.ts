@@ -14,6 +14,7 @@ export function getVesselCategory(vessel: {
 }): VesselCategory {
   const t = vessel.vessel_type;
   if (t.includes("통선")) return "통선";
+  if (t.includes("예인선")) return "예항선";
   if (t === "화물선") return "화물선";
   if (t === "기선(강선)") {
     const hasTowingPower = vessel.features?.some((f) => f.includes("예항력"));
@@ -88,8 +89,8 @@ export const VESSEL_CLASS_INFO: Record<
  * 각 유형에 속한 선박을 표시 순서대로 명시. (중복 없이 한 선박은 한 유형에만 속함)
  */
 export const VESSEL_CLASS_MEMBERS: Record<VesselClass, string[]> = {
-  tug: ["suyeon-1"],
-  utility: ["suyeon-5", "suyeon-6", "youngjin", "sinseong", "jinyang-2"],
+  tug: ["suyeon-1", "suyeon-5"],
+  utility: ["suyeon-6", "youngjin", "sinseong", "jinyang-2"],
   coastal: ["suyeon-3", "suyeon-8", "suyeon-9", "incheon-9"],
 };
 

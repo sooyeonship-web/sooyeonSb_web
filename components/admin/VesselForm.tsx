@@ -165,7 +165,7 @@ export default function VesselForm({ vessel, mode }: VesselFormProps) {
             <input id="year-built" type="number" value={yearBuilt} onChange={(e) => setYearBuilt(e.target.value)} className={inputClass} placeholder="예: 2015" />
           </div>
           <div>
-            <label htmlFor="length-m" className={labelClass}>전장 (m)</label>
+            <label htmlFor="length-m" className={labelClass}>길이 (m)</label>
             <input id="length-m" type="number" step="0.1" value={lengthM} onChange={(e) => setLengthM(e.target.value)} className={inputClass} placeholder="예: 45" />
           </div>
           <div>

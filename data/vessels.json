@@ -4,7 +4,7 @@
     "title": "수연1호",
     "slug": "suyeon-1",
     "type": "both",
-    "vessel_type": "기선(강선)",
+    "vessel_type": "예인선(강선)",
     "year_built": 1983,
     "length_m": 20.09,
     "tonnage": 33,
@@ -28,7 +28,7 @@
     "is_featured": true,
     "status": "rented",
     "created_at": "2024-01-15T09:00:00Z",
-    "updated_at": "2026-04-10T12:00:00Z",
+    "updated_at": "2026-09-19T12:00:00Z",
     "vessel_images": [
       {
         "id": "suyeon1-exterior",
@@ -187,18 +187,18 @@
     "title": "수연5호",
     "slug": "suyeon-5",
     "type": "both",
-    "vessel_type": "기선(FRP)",
+    "vessel_type": "예인선(FRP)",
     "year_built": 1995,
     "length_m": 18,
     "tonnage": 24,
-    "engine_power": null,
+    "engine_power": "500마력 × 2대",
     "capacity": 16,
     "location": "인천 연안부두",
-    "description": "1995년 경남 고성 세모조선 건조, FRP선.\n선실, 조타실 완비. 여객12명+선원4명 승선 가능.\n항해구역: 연해(국내).\n\n주요 작업 이력:\n· 2025.5 전북 구시포 현장 (삼원개발, 은성오엔씨 임대)\n· 2024.3 제주도 (현대스틸, 임대)",
+    "description": "1995년 경남 고성 세모조선 건조, FRP선.\n2026.9.3 예인선 항해검사를 통과한 국내 최초 FRP 예인선으로, 근해 예인·화물 운송에 투입.\n선실, 조타실 완비. 여객12명+선원4명 승선 가능.\n항해구역: 연해(국내).\n\n주요 작업 이력:\n· 2025.5 전북 구시포 현장 (삼원개발, 은성오엔씨 임대)\n· 2024.3 제주도 (현대스틸, 임대)",
     "features": [
+      "예항력(Bollard Pull) 8.8톤",
       "선실",
       "조타실",
-      "주기관",
       "여객 12명 + 선원 4명 승선",
       "연해 항해구역"
     ],
@@ -208,7 +208,7 @@
     "is_featured": true,
     "status": "active",
     "created_at": "2024-06-27T09:00:00Z",
-    "updated_at": "2026-04-10T12:00:00Z",
+    "updated_at": "2026-09-19T12:00:00Z",
     "vessel_images": [
       {
         "id": "suyeon5-exterior",
@@ -716,16 +716,15 @@
     "type": "both",
     "vessel_type": "기타선(통선)(FRP)",
     "year_built": 2020,
-    "length_m": 7.01,
-    "tonnage": 0.83,
+    "length_m": 8.5,
+    "tonnage": 1.67,
     "engine_power": "250마력 선외기",
-    "capacity": 4,
+    "capacity": 3,
     "location": "인천 연안부두",
-    "description": "2020년 인천 제일산업공사 건조, FRP선.\n250마력 선외기 1기, 휘발유.\n임시승선 3명 + 선원 1명. 해상공사 통선·측량용 임대 가능 및 선외기 어선 용도 매도 가능.",
+    "description": "2020년 인천 제일산업공사 건조, FRP선.\n250마력 선외기 1기.\n임시승선 2명 + 선원 1명. 해상공사 통선·측량용 임대 가능 및 선외기 어선 용도 매도 가능.",
     "features": [
       "250마력 선외기 1기",
-      "휘발유",
-      "임시승선 3명 + 선원 1명",
+      "임시승선 2명 + 선원 1명",
       "해운업 등록 ICB2088"
     ],
     "rent_price_per_day": null,
@@ -734,7 +733,7 @@
     "is_featured": false,
     "status": "active",
     "created_at": "2026-05-30T09:00:00Z",
-    "updated_at": "2026-05-30T09:00:00Z",
+    "updated_at": "2026-09-19T12:00:00Z",
     "vessel_images": [
       {
         "id": "incheon9-card-1",
