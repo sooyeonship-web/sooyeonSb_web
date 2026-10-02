@@ -35,6 +35,8 @@ jobs:
       # next.config.ts에 output: "export" + basePath 임시 적용
       - name: Configure for GitHub Pages
         run: |
+          # 정적 export는 middleware 미지원 (Netlify 배포 전용)
+          rm -f middleware.ts
           cat > next.config.ts << 'EOF'
           import type { NextConfig } from "next";
           const nextConfig: NextConfig = {

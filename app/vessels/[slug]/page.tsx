@@ -4,7 +4,6 @@ import Link from "next/link";
 import VesselGallery from "@/components/vessels/VesselGallery";
 import { Phone, MapPin, Ruler, Users, Calendar, ChevronRight } from "lucide-react";
 import type { Metadata } from "next";
-import BookingButton from "@/app/_components/BookingButton";
 import { COMPANY } from "@/constants/company";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -185,16 +184,13 @@ export default async function VesselDetailPage({ params }: { params: Promise<{ s
                 )}
               </div>
 
-              {/* 예약/문의 버튼 */}
-              <BookingButton vessel={vessel} />
-
               {/* 전화 */}
               <a
                 href={`tel:${COMPANY.phone}`}
-                className="flex items-center justify-center gap-2 w-full border border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-gray-600 py-2.5 rounded-lg text-sm font-medium transition-colors"
+                className="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg text-sm font-semibold transition-colors"
               >
-                <Phone className="w-3.5 h-3.5" />
-                전화 문의
+                <Phone className="w-4 h-4" />
+                전화 문의 {COMPANY.phone}
               </a>
             </div>
           </aside>
