@@ -4,7 +4,7 @@ import HeroVideo from "@/components/layout/BackgroundVideo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "작업현장 | 수연선박",
+  title: "작업현장",
   description: "수연선박의 정비, 항해, 상가 작업 등 현장 기록을 사진으로 확인하세요.",
 };
 

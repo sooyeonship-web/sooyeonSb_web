@@ -12,11 +12,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!vessel) return {};
   const ogImage =
     (vessel.vessel_images?.find((img) => img.is_primary) ?? vessel.vessel_images?.[0])?.url;
+  const kind = vessel.vessel_type.includes("예인선") ? "예인선" : vessel.vessel_type.includes("통선") ? "통선" : "선박";
+  const title = `${vessel.title} · ${kind} ${typeLabel[vessel.type] ?? "임대"} (${vessel.location ?? COMPANY.addressShort})`;
   return {
-    title: vessel.title,
+    title,
     description: vessel.description?.slice(0, 160) ?? `${vessel.title} - 선박 임대·판매`,
     openGraph: {
-      title: vessel.title,
+      title,
       description: vessel.description?.slice(0, 160) ?? "",
       images: ogImage ? [ogImage] : [],
     },
