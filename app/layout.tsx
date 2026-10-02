@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     siteName: "수연선박",
   },
+  verification: {
+    other: {
+      "naver-site-verification": "0a0bd253f18e7d198343b0d1c5a6674370aee50c",
+    },
+  },
 };
 
 export default function RootLayout({
