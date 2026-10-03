@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollAnimations from "@/components/layout/ScrollAnimations";
+import NextAuthSessionProvider from "@/providers/NextAuthSessionProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -27,12 +28,14 @@ export default function RootLayout({
   return (
     <html lang="ko" className="h-full antialiased" style={{ fontFamily: "'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui, sans-serif" }}>
       <body className="min-h-full flex flex-col">
+        <NextAuthSessionProvider>
         <ScrollAnimations />
         <Suspense>
           <Header />
         </Suspense>
         <main className="flex-1 pt-20">{children}</main>
         <Footer />
+        </NextAuthSessionProvider>
       </body>
     </html>
   );

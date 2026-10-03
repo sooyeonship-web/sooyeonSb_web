@@ -7,6 +7,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { getNavLinks } from "@/constants/enums";
+import AuthButtons from "@/components/header/auth-button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -179,7 +180,9 @@ export default function Header() {
             })}
           </nav>
 
-          {/* 전화 CTA */}
+          {/* 로그인과 전화 문의 */}
+          <div className="hidden md:flex items-center gap-2">
+          <AuthButtons scrolled={scrolled} />
           <a
             href="tel:010-0000-0000"
             className={`hidden md:flex items-center gap-1.5 px-4 py-2 rounded-lg text-base font-semibold transition-colors duration-300 ${
@@ -191,6 +194,7 @@ export default function Header() {
             <Phone className="w-3.5 h-3.5" />
             010-0000-0000
           </a>
+          </div>
 
           <button
             className={`md:hidden p-2.5 w-11 h-11 flex items-center justify-center rounded-lg transition-colors duration-300 ${
@@ -245,6 +249,7 @@ export default function Header() {
               );
             })}
             <div className={`px-5 py-3 border-t mt-1 ${scrolled ? "border-gray-100" : "border-white/10"}`}>
+              <div className="mb-3"><AuthButtons scrolled={scrolled} /></div>
               <a href="tel:010-0000-0000" className={`flex items-center gap-2 text-sm font-semibold ${scrolled ? "text-blue-600" : "text-blue-300"}`}>
                 <Phone className="w-4 h-4" />
                 010-0000-0000
