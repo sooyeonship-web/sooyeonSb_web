@@ -1,5 +1,6 @@
 import { Ship } from "lucide-react";
 import type { Vessel } from "@/lib/supabase";
+import HighlightText from "./HighlightText";
 import { VESSEL_CLASS_INFO, type VesselClass } from "@/lib/vessel-types";
 import VesselCard from "./VesselCard";
 import VesselFilter from "./VesselFilter";
@@ -28,10 +29,12 @@ interface Props {
 export default function VesselsView({ vessels, type, cls }: Props) {
   let pageTitle = "전체 선박";
   let pageSubtitle: string | null = null;
+  let pageHighlights: string[] = [];
   if (isVesselClass(cls)) {
     const info = VESSEL_CLASS_INFO[cls];
     pageTitle = `${info.icon} ${info.label}`;
     pageSubtitle = info.description;
+    pageHighlights = info.highlights ?? [];
   } else if (type && typeLabel[type]) {
     pageTitle = typeLabel[type];
   }
@@ -49,7 +52,7 @@ export default function VesselsView({ vessels, type, cls }: Props) {
                   data-fade-up
                   className="text-gray-500 text-sm max-w-2xl leading-relaxed"
                 >
-                  {pageSubtitle}
+                  <HighlightText text={pageSubtitle} phrases={pageHighlights} />
                 </p>
               ) : (
                 <p data-fade-up className="text-gray-400 text-sm">

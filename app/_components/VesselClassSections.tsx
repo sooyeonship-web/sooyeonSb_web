@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HighlightText from "./HighlightText";
 import { ChevronRight, Ship } from "lucide-react";
 import type { Vessel } from "@/lib/supabase";
 import {
@@ -61,7 +62,7 @@ export default function VesselClassSections({ groups }: Props) {
                   {/* 설명 (HWPX 발췌) — 타이틀과 한 그룹 */}
                   {/* 모바일: 자동 wrap (\n 무시), 데스크탑: \n을 줄바꿈으로 + 넓은 폭 */}
                   <p className="text-sm lg:text-base text-gray-600 leading-relaxed max-w-prose lg:max-w-5xl whitespace-normal lg:whitespace-pre-line">
-                    {info.description}
+                    <HighlightText text={info.description} phrases={info.highlights} />
                   </p>
                 </div>
 
