@@ -19,6 +19,7 @@ const contactInfo = [
     href: `tel:${c.phone}`,
   })),
   { icon: Clock, label: "운영시간", value: COMPANY.hours, href: null },
+  { icon: Anchor, label: "해운업 등록", value: COMPANY.shippingRegistration, href: null },
 ];
 
 const directions = [

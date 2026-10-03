@@ -18,11 +18,16 @@ export interface Vessel {
   note?: string | null
   year_built: number | null
   length_m: number | null
+  breadth_m?: number | null
+  depth_m?: number | null
   tonnage: number | null
   engine_power: string | null
+  fuel?: string | null
   horsepower?: number | null
   capacity: number | null
   location: string | null
+  /** 상세 계류장소 (없으면 location 표시) */
+  mooring?: string | null
   description: string | null
   features: string[] | null
   rent_price_per_day: number | null

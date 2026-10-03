@@ -15,6 +15,7 @@ export const PHOTO_CATEGORIES: Record<string, { label: string; group: PhotoGroup
   "generator-nameplate": { label: "발전기(명판)",     group: "vessel" },
   "generator-oil-filter":{ label: "발전기(오일필터)",  group: "vessel" },
   engine:                { label: "엔진",             group: "vessel" },
+  outboard:              { label: "선외기",           group: "vessel" },
   "dry-dock":            { label: "상가(정비)",       group: "work" },
   sailing:               { label: "항해",             group: "work" },
   cleanup:               { label: "환경정화",         group: "work" },

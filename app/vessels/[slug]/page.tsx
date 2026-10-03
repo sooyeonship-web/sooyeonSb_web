@@ -49,11 +49,13 @@ export default async function VesselDetailPage({ params }: { params: Promise<{ s
     { label: "선박번호", value: vessel.ship_number },
     { label: "건조 연도", value: vessel.year_built ? `${vessel.year_built}년` : null },
     { label: "길이", value: vessel.length_m ? `${vessel.length_m}m` : null },
+    { label: "폭 · 깊이", value: vessel.breadth_m && vessel.depth_m ? `${vessel.breadth_m}m · ${vessel.depth_m}m` : null },
     { label: "톤수", value: vessel.tonnage ? `${vessel.tonnage}톤` : null },
     { label: "마력", value: vessel.horsepower ? `${vessel.horsepower.toLocaleString()}마력` : null },
     { label: "엔진 출력", value: vessel.engine_power },
+    { label: "연료", value: vessel.fuel },
     { label: "승선 정원", value: vessel.capacity ? `${vessel.capacity}명` : null },
-    { label: "정박 위치", value: vessel.location },
+    { label: "정박 위치", value: vessel.mooring ?? vessel.location },
   ].filter((s) => s.value);
 
   return (
